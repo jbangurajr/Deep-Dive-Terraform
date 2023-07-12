@@ -51,6 +51,13 @@ terraform apply qa.tfplan
 
 ## Creating production is an exercise I leave to you!
 
+# Repeat for production environment
+terraform workspace new production
+
+terraform plan -out prod.tfplan
+
+terraform apply prod.tfplan
+
 ## Now let's change to Sally Sue's token for Consul
 ## You can go into the ACL section of the Consul UI and grab it
 # Linux and MacOS
