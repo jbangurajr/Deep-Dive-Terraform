@@ -96,3 +96,12 @@ terraform workspace new qa
 terraform plan -out qa.tfplan
 
 terraform apply qa.tfplan
+
+## Creating production is an exercise I leave to you!
+
+# Repeat for production environment
+terraform workspace new production
+
+terraform plan -out prod.tfplan
+
+terraform apply prod.tfplan
