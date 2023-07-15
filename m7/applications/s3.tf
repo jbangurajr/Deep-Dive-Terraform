@@ -67,8 +67,8 @@ resource "aws_iam_role" "asg" {
 
 resource "aws_iam_role_policy" "asg" {
   name = "${terraform.workspace}-globo-primary-rds"
-  role = aws_iam_role.asg.ids
-  #role = aws_iam_role.asg.id
+  #role = aws_iam_role.asg.ids
+  role = aws_iam_role.asg.id
 
   policy = <<-EOF
   {
