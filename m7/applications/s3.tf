@@ -2,7 +2,7 @@
 variable "aws_bucket_prefix" {
   #type    = strings
   type = string
-  
+
   default = "globo"
 }
 
@@ -12,8 +12,8 @@ resource "random_integer" "rand" {
 }
 
 locals {
-  bucket_name         = "${var.aws_bucket_prefix}_${random_integer.rand.result}"
-  #bucket_name         = "${var.aws_bucket_prefix}-${random_integer.rand.result}"
+  #bucket_name = "${var.aws_bucket_prefix}_${random_integer.rand.result}"
+  bucket_name         = "${var.aws_bucket_prefix}-${random_integer.rand.result}"
 }
 
 resource "aws_s3_bucket" "logs_bucket" {
@@ -36,8 +36,8 @@ resource "aws_iam_instance_profile" "asg" {
   }
 
   name = "${terraform.workspace}_asg_profile_bug"
-  role = "aws_iam_role.asg.name"
-  #role = aws_iam_role.asg.name
+  #role = "aws_iam_role.asg.name"
+  role = aws_iam_role.asg.name
 }
 
 #### Instance roles
@@ -45,7 +45,7 @@ resource "aws_iam_instance_profile" "asg" {
 resource "aws_iam_role" "asg" {
   name = "${terraform.workspace}_asg_role"
   path = "/"
-  
+
   assume_role_policy = <<EOF
 {
   "Version": "2012-10-17",
