@@ -13,7 +13,7 @@ export CONSUL_HTTP_TOKEN=SECRETID_VALUE
 $env:CONSUL_HTTP_TOKEN="SECRETID_VALUE"
 
 ### Try to run terraform init with a bad command switch
-terraform init -backend-confi="path=applications/state/globo-primary"
+terraform init -backend-config="path=applications/state/globo-primary"
 
 # Now let's go into the applications directory
 cd .\applications
