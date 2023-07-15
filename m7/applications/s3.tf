@@ -1,7 +1,7 @@
 #### S3 buckets
 variable "aws_bucket_prefix" {
-  type    = strings
-  #type = string
+  #type    = strings
+  type = string
   
   default = "globo"
 }
