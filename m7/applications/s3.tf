@@ -12,7 +12,11 @@ resource "random_integer" "rand" {
 }
 
 locals {
+<<<<<<< HEAD
   #bucket_name = "${var.aws_bucket_prefix}_${random_integer.rand.result}"
+=======
+  #bucket_name         = "${var.aws_bucket_prefix}_${random_integer.rand.result}"
+>>>>>>> efcbd0e293b2ea1c60d7385c284ebf643511d98e
   bucket_name         = "${var.aws_bucket_prefix}-${random_integer.rand.result}"
 }
 
