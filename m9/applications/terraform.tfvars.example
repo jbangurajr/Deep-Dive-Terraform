@@ -1,1 +1,1 @@
-playbook_repository = "https://github.com/ned1313/ansible-playbook-wordpress-nginx.git"
+playbook_repository = "https://github.com/jbangurajr/ansible-playbook-wordpress-nginx.git"
